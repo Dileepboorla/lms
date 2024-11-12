@@ -26,19 +26,29 @@
         border-radius: 10px;
         box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
         width: 100%;
-        max-width: 400px;
-        text-align: center;
+        max-width: 500px;
     }
 
     .form-container h2 {
         margin-bottom: 20px;
         font-size: 24px;
         color: #333;
+        text-align: center;
+    }
+
+    .form-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .form-row div {
+        flex: 1 1 45%;
     }
 
     .form-container label {
         display: block;
-        text-align: left;
         font-size: 14px;
         color: #666;
         margin-bottom: 5px;
@@ -88,26 +98,43 @@
     <div class="form-container">
         <h2>Apply for Leave</h2>
         <form action="#" method="post">
-            <label for="fromDate">From Date</label>
-            <input type="date" id="fromDate" name="fromDate" required>
+            <!-- First row of inputs -->
+            <div class="form-row">
+                <div>
+                    <label for="fromDate">From Date</label>
+                    <input type="date" id="fromDate" name="fromDate" required>
+                </div>
+                <div>
+                    <label for="toDate">To Date</label>
+                    <input type="date" id="toDate" name="toDate" required>
+                </div>
+            </div>
 
-            <label for="toDate">To Date</label>
-            <input type="date" id="toDate" name="toDate" required>
+            <div class="form-row">
+                <div>
+                    <label for="noOfDays">Number of Days</label>
+                    <input type="number" id="noOfDays" name="noOfDays" required min="1">
+                </div>
+                <div>
+                    <label for="leaveType">Leave Type</label>
+                    <select id="leaveType" name="leaveType" required>
+                        <option value="sick">Sick Leave</option>
+                        <option value="casual">Casual Leave</option>
+                        <option value="annual">Annual Leave</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
 
-            <label for="reason">Reason</label>
-            <textarea id="reason" name="reason" rows="3" required></textarea>
+            <!-- Second row of inputs -->
+            <div class="form-row">
+                <div style="flex: 1 1 100%;">
+                    <label for="reason">Reason</label>
+                    <textarea id="reason" name="reason" rows="3" required></textarea>
+                </div>
+            </div>
 
-            <label for="noOfDays">Number of Days</label>
-            <input type="number" id="noOfDays" name="noOfDays" required min="1">
-
-            <label for="leaveType">Leave Type</label>
-            <select id="leaveType" name="leaveType" required>
-                <option value="sick">Sick Leave</option>
-                <option value="casual">Casual Leave</option>
-                <option value="annual">Annual Leave</option>
-                <option value="other">Other</option>
-            </select>
-
+            <!-- Submit button -->
             <button type="submit">Submit</button>
         </form>
     </div>
