@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manager Dashboard - Leave Management System</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f5f5f5;
+    }
+
+    .dashboard-container {
+        display: flex;
+        gap: 20px;
+        background: #ffffff;
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .column {
+        flex: 1;
+        text-align: center;
+    }
+
+    .column h3 {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #333;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 15px;
+        background-color: #2575fc;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .button:hover {
+        background-color: #1b5db0;
+        transform: translateY(-3px);
+    }
+</style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Column for Manager's Personal Actions -->
+        <div class="column">
+            <h3>My Quick Actions</h3>
+            <a href="#" class="button">View My Leave Requests</a>
+            <a href="#" class="button">Request Time Off</a>
+            <a href="#" class="button">My Leave Balance</a>
+        </div>
+        
+        <!-- Column for Team Management Actions -->
+        <div class="column">
+            <h3>Team Management</h3>
+            <a href="#" class="button">Approve/Reject Leave Requests</a>
+            <a href="#" class="button">Team Leave History</a>
+            <a href="#" class="button">Notify Team</a>
+        </div>
+    </div>
+</body>
+</html>
