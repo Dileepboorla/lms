@@ -3,36 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leave Management System - Login</title>
+<title>Login - Leave Management System</title>
 <style>
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: Arial, sans-serif;
+        font-family: 'Roboto', Arial, sans-serif;
     }
 
     body {
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-        background-color: #f5f5f5;
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        color: #ffffff;
     }
 
     .login-container {
         background: #ffffff;
         padding: 40px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 400px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         text-align: center;
+        max-width: 400px;
+        width: 100%;
     }
 
     .login-container h2 {
         margin-bottom: 20px;
-        font-size: 24px;
+        font-size: 28px;
         color: #333;
     }
 
@@ -40,59 +41,83 @@
     .login-container input[type="password"] {
         width: 100%;
         padding: 12px;
-        margin: 10px 0;
+        margin: 15px 0;
         border: 1px solid #ddd;
-        border-radius: 5px;
+        border-radius: 25px;
         outline: none;
         font-size: 16px;
-        color: #333;
+        color: #555;
+        background: #f9f9f9;
     }
 
     .login-container input[type="text"]:focus,
     .login-container input[type="password"]:focus {
-        border-color: #2575fc;
+        border-color: #6a11cb;
+        background: #ffffff;
     }
 
     .login-container button {
         width: 100%;
         padding: 12px;
-        background-color: #2575fc;
-        color: #ffffff;
+        margin-top: 15px;
         border: none;
-        border-radius: 5px;
+        border-radius: 25px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #ffffff;
         font-size: 16px;
+        font-weight: bold;
         cursor: pointer;
-        transition: background-color 0.3s;
+        transition: all 0.3s ease;
     }
 
     .login-container button:hover {
-        background-color: #1b5db0;
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
     }
 
     .login-container .footer {
-        margin-top: 15px;
+        margin-top: 20px;
         font-size: 14px;
-        color: #666;
+        color: #555;
     }
 
     .login-container .footer a {
         color: #2575fc;
         text-decoration: none;
+        font-weight: bold;
     }
 
     .login-container .footer a:hover {
         text-decoration: underline;
     }
+
+    @media (max-width: 480px) {
+        .login-container {
+            padding: 20px;
+        }
+
+        .login-container h2 {
+            font-size: 24px;
+        }
+
+        .login-container input[type="text"],
+        .login-container input[type="password"],
+        .login-container button {
+            font-size: 14px;
+        }
+    }
 </style>
 </head>
 <body>
     <div class="login-container">
-        <h2>Leave Management System</h2>
+        <h2>Welcome Back!</h2>
         <form action="#" method="post">
-            <input type="text" placeholder="Username" required>
-            <input type="password" placeholder="Password" required>
-            <button type="submit">Login</button>
+            <input type="text" placeholder="Enter your username" required>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit">Log In</button>
         </form>
+        <div class="footer">
+            <p>Forgot your password? <a href="#">Reset here</a></p>
+        </div>
     </div>
 </body>
 </html>
